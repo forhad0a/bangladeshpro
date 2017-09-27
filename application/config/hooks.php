@@ -10,4 +10,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 |	https://codeigniter.com/user_guide/general/hooks.html
 |
-*/
+*/$hook['pre_controller'] = array(
+        'class'    => 'TraceMe',
+        'function' => 'tracy',
+        'filename' => 'TraceMe.php',
+        'filepath' => 'hooks',
+        //'params'   => array('beer', 'wine', 'snacks')
+);

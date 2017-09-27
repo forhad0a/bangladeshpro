@@ -49,14 +49,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$routes = new \Bangladeshpro\Route();
+
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
 // API
-$route['arenas'] = 'home/getArenas';
-$route['cards'] = 'home/getCards';
-$route['chests'] = 'home/getChests';
-$route['players'] = 'home/getPlayers';
-$route['leagues'] = 'home/getLeagues';
+$routes->get('clan/{any}', 'home/getClan/$1');
+$routes->get('top-clan', 'home/getTopClan', ['as' => 'top_clan']);
+$routes->get('get-player/{any}', 'home/getPlayer/$1');
+$routes->get('constants', 'home/getConstants');
+
+
+//
+$route = $routes->map($route);

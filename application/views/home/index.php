@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Welcome to {{ $name }}</title>
 
 	<style type="text/css">
 
@@ -71,12 +71,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to {{ $name }}!</h1>
 
 	<div id="body">
+		
 		<h2>All Links:</h2>
-		<a href="{{ site_url('arenas') }}">Arenas</a> |
-		<a href="{{ site_url('cards') }}">Cards</a> |
-		<a href="{{ site_url('chests') }}">Chests</a> |
-		<a href="{{ site_url('players') }}">Players</a> |
-		<a href="{{ site_url('leagues') }}">leagues</a>
+		<a href="{{ site_url('/') }}">My Clan</a> |
+		<a href="{{ site_url('clans/') }}">top clans</a> |
+		<a href="{{ site_url('player') }}">Player</a> |
+		<a href="{{ site_url('constants') }}">constants</a> |
+		<a href="{{ site_url('getMultipleClans') }}">leagues</a>
+		<code><pre>{{ var_dump(json_decode($clan)) }}</pre></code>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>

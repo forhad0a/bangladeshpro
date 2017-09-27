@@ -7,48 +7,37 @@ class Home extends MY_Controller {
 	public function index()
 	{
 		$this->data['name'] = "bangladesh Pro";
-		$this->show('welcome_message');
+		$this->data['clan'] = $this->api->getClan();
 		
-		//$this->load->view('welcome_message');
-	}
-	
-	//{"arenas":"api/arenas","cards":"api/cards","chests":"api/chests","players":"api/players","leagues":"api/leagues"}
-	
-	// arenas
-	public function getArenas()
-	{
-		$this->data['arenas'] = $this->api->sendRequest('arenas');
 		$this->show();
 	}
 	
-	
-	// cards
-	public function getCards()
+	function getClan($tag = null)
 	{
-		$this->data['cards'] = $this->api->sendRequest('cards');
+		$this->data['clan'] = $this->api->getClan($tag);
+		
 		$this->show();
 	}
 	
-	// chests
-	public function getChests()
+	function getTopClan()
 	{
-		$this->data['chests'] = $this->api->sendRequest('chests');
+		$this->data['topClans'] = $this->api->getTopClan();
 		$this->show();
 	}
 	
-	
-	// cards
-	public function getPlayers()
+	function getMultipleClans($tag = '2CCCP,2U2GGQJ')
 	{
-		$this->data['players'] = $this->api->sendRequest('players');
+		$this->data['clans'] = $this->api->getMultipleClans($tag);
 		$this->show();
 	}
-	
-	
-	// cards
-	public function getLeagues()
+	function getPlayer($tag = 'Y99YRPYG')
 	{
-		$this->data['leagues'] = $this->api->sendRequest('leagues');
+		$$this->data['player'] = $this->api->getPlayer($tag = 'Y99YRPYG');
+		$this->show();
+	}
+	function getConstants()
+	{
+		$this->data['constants'] = $this->api->getConstants();
 		$this->show();
 	}
 }

@@ -1,0 +1,7 @@
+git add .
+
+
+git commit -am "any trext"
+
+
+git push --all -u

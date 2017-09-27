@@ -1,8 +1,8 @@
 {
-	"description": "The CodeIgniter framework",
+	"description": "BanagladeshPro",
 	"name": "codeigniter/framework",
 	"type": "project",
-	"homepage": "https://codeigniter.com",
+	"homepage": "http://bangladeshpro.ml",
 	"license": "MIT",
 	"support": {
 		"forum": "http://forum.codeigniter.com/",
@@ -10,14 +10,26 @@
 		"slack": "https://codeigniterchat.slack.com",
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
+	"config": {
+      "vendor-dir": "application/vendor"
+    },
 	"require": {
-		"php": ">=5.3.7"
+		"php": ">=5.3.7",
+		"ahir/facades": "1.0.1",
+		"cebe/markdown": "1.1.0",
+		"symfony/yaml": "3.1.4",
+		"xiaoler/blade": "5.4.3"
+		
 	},
-	"suggest": {
-		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*",
-		"phpunit/phpunit": "4.* || 5.*"
-	}
+	"autoload": {
+        "classmap": [
+            "application/facades"
+        ],
+        "psr-0": {
+            "Bangladeshpro": "application/src/"
+        },
+        "psr-4": {
+            "Model": "application/models"
+        }
+    }
 }

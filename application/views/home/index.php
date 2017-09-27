@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to {{ $name }}!</h1>
 
 	<div id="body">
-		
+		<span>{{ $siteName }}</span>
 		<h2>All Links:</h2>
 		<a href="{{ site_url('/') }}">My Clan</a> |
 		<a href="{{ site_url('clans/') }}">top clans</a> |

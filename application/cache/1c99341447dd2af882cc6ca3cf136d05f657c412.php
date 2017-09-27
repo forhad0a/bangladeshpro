@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to <?php echo e($name); ?>!</h1>
 
 	<div id="body">
-		
+		<span><?php echo e($siteName); ?></span>
 		<h2>All Links:</h2>
 		<a href="<?php echo e(site_url('/')); ?>">My Clan</a> |
 		<a href="<?php echo e(site_url('clans/')); ?>">top clans</a> |

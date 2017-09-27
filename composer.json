@@ -14,7 +14,6 @@
       "vendor-dir": "application/vendor"
     },
 	"require": {
-		"php": ">=5.3.7",
 		"ahir/facades": "1.0.1",
 		"cebe/markdown": "1.1.0",
 		"symfony/yaml": "3.1.4",
@@ -27,9 +26,6 @@
         ],
         "psr-0": {
             "Bangladeshpro": "application/src/"
-        },
-        "psr-4": {
-            "Model": "application/models"
         }
     }
 }

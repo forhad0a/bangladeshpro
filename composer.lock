@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "39d0f23958c77b7e03328d5f97a38060",
+    "content-hash": "5cf9d2f4271e778d53e39ee50a4495e8",
     "packages": [
         {
             "name": "ahir/facades",
@@ -207,8 +207,6 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": ">=5.3.7"
-    },
+    "platform": [],
     "platform-dev": []
 }

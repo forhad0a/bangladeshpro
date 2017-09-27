@@ -9,5 +9,4 @@ return array(
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Xiaoler\\Blade\\' => array($vendorDir . '/xiaoler/blade/src'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
-    'Model' => array($baseDir . '/application/models'),
 );
